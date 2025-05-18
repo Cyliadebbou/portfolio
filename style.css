@@ -410,4 +410,26 @@ section {
     animation: fadeIn 0.6s ease-in-out; /* L'animation dure 0.6 secondes et est fluide */
 }
 
+.test-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 10px;
+    background-color: var(--main-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    --accent-color: #fafafa;
+}
+
+.test-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Centrage du bouton */
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
 
