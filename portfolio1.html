@@ -1,0 +1,349 @@
+<!DOCTYPE html> <!-- Déclare que ce document est en HTML5 -->
+<html lang="fr"> <!-- Définit la langue du contenu comme étant le français -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
+    <title>Mon Portfolio</title> <!-- Titre de l'onglet de la page -->
+
+    <!-- Lien vers la feuille de style CSS principale -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ajout d’un paramètre pour forcer le navigateur à recharger le fichier CSS (éviter le cache) -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <header> <!--une balise qui permet d'avoir un en-tête de la page visible, contenant le titre et le menu-->
+       
+        <nav><!--balise sémantique utilisée pour définir une section de navigation sur une page web.-->
+            <ul>
+                <li><a href="#accueil">accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#Mesprojets">Portfolio</a></li>
+                <li><a href="#Mesexpériences">Mes expériences</a></li>
+                <li><a href="#Mesformations">Mes formations</a></li>
+                <li><a href="#Mescompétences">Mes compétences</a></li>
+                <li><a href="#Centreintérêt">Centre d'intérêt</a></li>
+                <li><a href="#Contact">Contact</a></li>
+
+<!--<li> sert uniquement à définir un élément de liste.
+<a> sert à créer un lien cliquable vers une autre page ou une section de la même page.
+Sans <a>, la liste ne serait pas interactive, donc on ne pourrait pas naviguer en cliquant sur les éléments.-->
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="accueil"><!--Définit une section de contenu avec l'identifiant et pour naviguer vers cette section avec un lien-->
+        <div class="intro"> <!-- La balise <div> est un conteneur générique utilisé pour regrouper des éléments HTML.
+             L'attribut class permet d'appliquer des styles CSS ou des comportements JavaScript spécifiques à cette section,
+              facilitant ainsi la mise en page et l'organisation du contenu. -->
+            <img src="photos/c.jpg" alt="Photo de moi" class="photo">
+            <div class="intro-text">
+                <h2>Cylia DEBBOU</h2>
+                <p>Je suis étudiante en M1 Santé Publique parcours Informatique Biomédicale. Je suis en recherche d'alternance.</p>
+                <a href="https://www.linkedin.com/in/cylia-debbou-3b83a11b7/" class="linkedin-btn" target="_blank">Voir mon LinkedIn</a>
+                <!--l'attribut target="_blank" permet d'ouvrir le lien dans un nouvel onglet ou une nouvelle fenêtre du navigateur.
+                 Sans cet attribut, le lien s'ouvrirait dans le même onglet.-->
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos"> <!-- Début de la section "À propos" -->
+        <div class="intro-apropos"> <!-- Conteneur structurant cette section (gauche/droite) -->
+
+            <!-- Partie texte (à gauche de l’image sur desktop) -->
+            <div class="text-apropos">
+                <h2>Qui suis-je</h2>
+                <p>
+                Étudiante en Master 1 Informatique Biomédicale avec une double licence en Microbiologie et Biologie Santé,
+                je me spécialise dans l’application des technologies avancées à la santé.
+                J’ai acquis des compétences solides en programmation (Python, R, SQL, HTML, JavaScript, CSS, PHP) et en analyse de données,
+                je suis à la recherche d’une alternance pour mon Master 2 en santé numérique, intelligence artificielle et bioinformatique.
+                Mon objectif : exploiter les données pour optimiser la prise de décision médicale et améliorer la qualité des soins.
+                </p>
+            </div>
+
+        <!-- Image illustrative (affichée à droite) -->
+            <div class="image-apropos">
+                <img src="photos/image.png" alt="Informatique biomédicale">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="Mesprojets"><!-- Section dédiée aux projets réalisés ou en cours -->
+        <h2>Portfolio</h2><!-- Titre principal de la section -->
+
+    <!-- Premier projet : Qualité en laboratoire -->
+    
+        <div class="projet">
+            <h3>Qualité au Laboratoire d'Analyse Médicale</h3>
+                <!-- Description du contexte -->
+            <p>
+                Lors de mon premier stage, j’ai travaillé sur la <strong>qualité en laboratoire d’analyse médicale</strong>, 
+                plus précisément sur les <strong>analyses et contrôles qualités en bactériologie</strong>.
+            </p>
+            <!-- Détail du lieu du stage et des missions -->
+            <p>
+                Mon stage s'est déroulé au
+                <a href="https://www.cerballiance.fr/" target="_blank"><strong>Laboratoire de Bactériologie de Cerballiance</strong></a>, 
+                où j'étais chargé d'effectuer des manipulations précises pour garantir des résultats corrects. 
+                J’ai participé aux différentes expériences et contrôles effectués sur les automates du laboratoire afin d’assurer leur fiabilité.
+            </p>
+            <p>
+                Les principaux objectifs de ce stage étaient :
+            </p>
+               <!-- Liste des objectifs du stage -->
+            <ul>
+                <li>Assurer le bon fonctionnement de l'équipement de laboratoire.</li>
+                <li>Réaliser des tests de <a href="https://www.bing.com/videos/riverview/relatedvideo?q=contr%c3%b4le+de+qualit%c3%a9+dans+un+laboratoire+de+microbiologie+&&view=riverview&mmscn=mtsc&mid=D6CF9E95DBD1C5C3431CD6CF9E95DBD1C5C3431C&&aps=0&FORM=VMSOVR" target="_blank">contrôle qualité</a>.</li>
+                <li>Analyser les différents types d’échantillons et assurer leur suivi, de la réception aux résultats finaux.</li>
+            </ul>
+               <!-- Un deuxième bloc de liste est présent ici par erreur (doublon à corriger si nécessaire) -->
+            <ul>
+                <li>Assurer le bon fonctionnement de l'équipement de laboratoire.</li>
+                <li>Réaliser des tests de <a href="https://www.bing.com/videos/riverview/relatedvideo?q=contr%c3%b4le+de+qualit%c3%a9+dans+un+laboratoire+de+microbiologie+&&view=riverview&mmscn=mtsc&mid=D6CF9E95DBD1C5C3431CD6CF9E95DBD1C5C3431C&&aps=0&FORM=VMSOVR" target="_blank">
+                contrôle qualité</a>.</li>
+                <li>Analyser les différents types d’échantillons et assurer leur suivi, de la réception aux résultats finaux.</li>
+            </ul>
+
+<!-- Résultat attendu du stage -->
+            <p>
+                Grâce à ces processus rigoureux, les résultats obtenus sont fiables et permettent aux patients de recevoir un traitement adapté.
+            </p>
+
+            
+        </div>
+     <!-- Deuxième projet : Étude clinique PET Fibrosis -->
+        <div class="projet">
+            <h3>Étude Clinique : PET Fibrosis</h3>
+            <p>
+                 <!-- Présentation du projet d'étude clinique -->
+                J’ai également travaillé sur une <strong>étude clinique</strong> intitulée 
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10531835/" target="_blank"><strong>PET Fibrosis</strong></a>, 
+                visant à mieux comprendre la fibrose pulmonaire à l’aide de l’imagerie médicale.
+            </p>
+              <!-- Missions confiées dans ce projet -->
+            <p>
+                Ce projet m’a permis de découvrir et d’approfondir les missions d’un attaché de recherche clinique, notamment :
+            </p>
+            <ul>
+                <li>Suivi des inclusions et monitoring des données.</li>
+                <li>Respect du protocole et suivi logistique.</li>
+                <li>Suivi administratif et mise à jour des tableaux de reporting.</li>
+                <li>Déplacements sur les sites d’investigations pour des visites de monitoring.</li>
+            </ul>
+            <p>
+                Ce projet m’a également permis de développer des compétences essentielles comme l’organisation, la rigueur, la gestion des priorités et l’autonomie.
+            </p>
+            <p>
+                <!-- Transition vers le test interactif -->
+                Toutes ces missions sont encadrées par les 
+                <a href="https://fr.wikipedia.org/wiki/Bonne_pratique_clinique" target="_blank"><strong>Bonnes Pratiques Cliniques (BPC)</strong></a>, 
+                garantissant la fiabilité et l’éthique des essais cliniques.
+              <p>Testez vos connaissances sur les Bonnes Pratiques Cliniques avec mon test.</p>
+                    <a href="test-bpc/index.php" class="button" target="_blank">Passer le test</a>
+
+               
+                
+            </p>
+        </div>
+    
+        <div class="projet">
+            <h3>Posters et Supports de Communication</h3>
+            <p>
+                J’ai également réalisé des <strong>posters scientifiques</strong> pour présenter mes travaux et synthétiser les résultats de mes projets.
+                Ces supports permettent une meilleure communication des données et facilitent les échanges avec les professionnels du domaine.
+            </p>
+        </div>
+    </section>
+
+   
+
+    
+<!-- Début de la section des expériences professionnelles -->
+
+        <section id="Mesexpériences">
+            <h2>Mes Expériences</h2>
+        
+            <div class="experience">
+                <h3>Stage Attachée de Recherche Clinique</h3>
+                <p><strong>APHP</strong></p>
+                <p>Février 2024 - Juillet 2024</p>
+                <ul>
+                    <li>Gestion et suivi des essais cliniques selon la réglementation (BPC).</li>
+                    <li>Participation aux visites de monitoring.</li>
+                    <li>Collaboration avec les investigateurs et mise en conformité des documents réglementaires.</li>
+                </ul>
+            </div>
+        
+            <div class="experience">
+                <h3>Stage Technicienne de Laboratoire</h3>
+                <p><strong>Plateau technique Wilson Cerballiance</strong></p>
+                <p>Avril 2023 - Juin 2023</p>
+                <ul>
+                    <li>Formation sur les techniques d'analyses en bactériologie et stockage des échantillons.</li>
+                    <li>Utilisation de logiciels de gestion de données biologiques.</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+
+
+<!-- Début de la section des formations -->
+        <section id="Mesformations">
+            <h2>Mes Formations</h2>
+        
+            <div class="formation">
+                <h3>M1 Informatique Biomédicale</h3>
+                <p><strong>Université Sorbonne Paris Nord / Université Paris Cité</strong></p>
+                <p>2024 - 2025</p>
+                <ul>
+                    <li>Programmation : Python, R, Java (UML, POO).</li>
+                    <li>Traitement des images.</li>
+                    <li>Bioinformatique.</li>
+                    <li>Gestion et analyse de bases de données (SQL).</li>
+                    <li>Technologies du web et développement d'applications biomédicales.</li>
+                </ul>
+            </div>
+        
+            <div class="formation">
+                <h3>DU Recherche Clinique</h3>
+                <p><strong>Université Paris Est Créteil</strong></p>
+                <p>2023 - 2024</p>
+                <ul>
+                    <li>Normes et réglementations en recherche clinique.</li>
+                    <li>Rédaction et gestion de protocoles d'essais cliniques.</li>
+                </ul>
+            </div>
+        
+            <div class="formation">
+                <h3>Licence Biologie Santé</h3>
+                <p><strong>Université Paris Est Créteil</strong></p>
+                <p>2022 - 2024</p>
+                <ul>
+                    <li>Traitement et analyse de données (Excel, R).</li>
+                    <li>Techniques de laboratoire : PCR, électrophorèse.</li>
+                </ul>
+            </div>
+        
+            <div class="formation">
+                <h3>Licence Microbiologie</h3>
+                <p><strong>USTHB</strong></p>
+                <p>2020 - 2021</p>
+                <ul>
+                    <li>Contrôle qualité des produits alimentaires et pharmaceutiques.</li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        
+        
+        
+        
+<!-- Début de la section des compétences-->
+        <section id="Mescompétences">
+            <h2>Mes compétences</h2>
+            <ol>
+                <li>Langages : Python, R, HTML, Javascript, CSS, SQL.</li>
+                <li>programmation orientée objet.</li>
+                <li>modélisation des système d’information (UML).</li>
+                <li> Gestion des Bases de Données.</li>
+                <li>Traitement d’image biomédicale.</li>
+                <li>Développement Web : Conception et développement de
+                sites web (HTML, CSS et Java).</li>
+                <li>Bio-informatique : Analyse et gestion des données
+                 biologiques.</li>
+                 <li>Mi^trise de l'outil Figma pour ke designe</li>
+                <li>Outils : Pack Office.</li>
+                <li>Maîtrise des pratiques en microbiologie et biologie
+                    moléculaire.</li>
+                <li>Maîtrise des bonnes pratiques cliniques (BPC).</li>
+                <li>Gestion et suivi de projets en recherche clinique.</li>
+                <li>Capacité d'adaptation et gestion des priorités.</li>
+                <li>Travail en équipe et collaboration multidisciplinaire.</li>
+                <li>Esprit d'analyse et résolution de problèmes.</li>
+                
+                <h3> LANGUES </h3>
+                    <li>Français (C2)</li>
+                    <li>Anglais (B1)</li>
+    
+            </ol>
+        </section>
+        
+    
+    
+    
+        
+
+
+
+        
+        <section id="Centreintérêt">
+            <h2>Centres d’Intérêt</h2>
+        
+            <div class="interet">
+                <h3>Bénévolat</h3>
+                <p>
+                    Engagée dans des activités bénévoles, j’aime consacrer du temps à des causes qui me tiennent à cœur. 
+                    J’ai participé à des actions solidaires, notamment dans l’accompagnement de personnes en difficulté et 
+                    l’organisation d’événements caritatifs. Le bénévolat m’a appris l’importance du travail en équipe, 
+                    de l’empathie et de la gestion de projet.
+                </p>
+            </div>
+        
+            <div class="interet">
+                <h3>Lecture</h3>
+                <p>
+                    Passionnée de lecture, j’apprécie particulièrement les ouvrages scientifiques, les romans et les livres de 
+                    développement personnel. La lecture me permet d’enrichir mes connaissances, d’exercer ma pensée critique 
+                    et de découvrir de nouvelles perspectives sur le monde.
+                </p>
+            </div>
+        
+            <div class="interet">
+                <h3>Cuisine</h3>
+                <p>
+                    Amatrice de cuisine, j’aime expérimenter de nouvelles recettes et explorer différentes gastronomies du monde. 
+                    Cuisiner est pour moi un moyen de créativité et de partage. Cela développe également des compétences en 
+                    organisation et en gestion du temps.
+                </p>
+            </div>
+        
+            <div class="interet">
+                <h3>Sport</h3>
+                <p>
+                    Le sport occupe une place importante dans ma vie. Que ce soit par la course à pied, la musculation ou les 
+                    sports collectifs, il m’aide à garder un bon équilibre physique et mental. Le sport m’a appris la persévérance, 
+                    la discipline et le dépassement de soi.
+                </p>
+            </div>
+        </section>
+         
+
+
+
+        <section id="Contact">
+            <h2>Contact</h2>
+
+            <p>
+             Vous pouvez me contacter directement par mail :<br>
+            <a href="mailto:cylia.debbou@gmail.com" class="email-link">cylia.debbou@gmail.com</a>
+            </p>
+
+            <p>Numéro : 07 53 93 61 61</p>
+            <p>Adresse : Île-de-France</p>
+        </section>
+
+
+        
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
+

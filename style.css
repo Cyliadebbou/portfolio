@@ -1,0 +1,413 @@
+
+/* Définition des couleurs principales pour tout le site */
+:root {
+    /* Couleur principale utilisée pour les éléments dominants (boutons, titres, liens actifs, etc.) */
+    --main-color: #5f749c;
+
+    /* Couleur appliquée lors du survol d’un élément (effet hover) */
+    --hover-color: #bad6f1;
+
+    /* Couleur du texte principal (paragraphes, titres, etc.) */
+    --text-color: #131929;
+
+    /* Couleur de fond générale du site (arrière-plan des pages) */
+    --background-color: #eef1f7;
+
+    /* Couleur blanche standard, utilisée pour les cartes, blocs de contenu, ou texte sur fond foncé */
+    --white: #fff;
+
+    /* Couleur secondaire utilisée comme accent (souvent pour boutons ou éléments interactifs) */
+    --accent-color: #3b42ad;
+}
+
+
+/*  Réinitialisation des marges et paddings pour une mise en page propre */
+* { /* "*" il s'applique à tous les éléments (* = sélecteur universel)*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*box-sizing: border-box; est plus efficace
+     et plus intuitif que d’ajuster width manuellement, car il simplifie la gestion de l’espace.
+      Facilite la gestion des dimensions → Pas besoin de recalculer la largeur en fonction du padding et de la border.*/
+}
+
+
+
+/* Appliquer une police et une couleur de texte globale */
+body {
+    font-family: 'Monospace', sans-serif; /* Définit une police d'écriture monospace */
+    /*Si "Monospace" n’est pas disponible, une police sans-serif sera utilisée.*/
+    background-color: var(--light-color);/* Définit la couleur de fond en utilisant la variable */
+    color: var(--text-color);/* Définit la couleur du texte en utilisant la variable */
+    line-height: 2;/*Définit l’espace entre les lignes*/
+    padding-top: 70px; /* Ajoute un espace sous chaque paragraphe. Pour éviter que le header fixe cache le contenu */
+}
+
+
+
+
+/* HEADER - En-tête et menu de navigation */
+header {
+    background: var(--main-color); /* Définit la couleur de fond de l'en-tête avec une variable CSS */
+    color: white; /* Définit la couleur du texte de l'en-tête en blanc */
+    padding: 15px 0; /* Ajoute un padding de 15px en haut et en bas de l'en-tête */
+    position: fixed; /* Fixe le menu en haut de la page, il reste visible même en scrollant */
+    width: 100%; /* Définit la largeur de l'en-tête à 100% de l'écran */
+    top: 0; /* Positionne l'en-tête tout en haut de la page */
+    
+}
+
+
+nav ul {
+   
+    list-style: none; /* Enlève les puces de la liste */
+    display: flex; /* Affiche les éléments du menu en ligne (horizontalement) */
+    justify-content: center; /* Centre les éléments du menu horizontalement */
+}
+
+
+
+nav ul li {
+    margin: 0 15px; /* Ajoute un espacement de 15px à gauche et à droite et 0 en haut et en bas de chaque élément de menu*/
+}
+
+
+nav ul li a {
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    color: white; /* Définit la couleur du texte des liens en blanc */
+    font-weight: 500; /* Applique une graisse de police de 500 (semi-gras) */
+    padding: 8px 15px; /* Ajoute du padding autour des liens pour les rendre plus cliquables */
+    transition: 0.3s; /* Ajoute une transition douce de 0.3 seconde lors du survol */
+} 
+
+
+
+
+nav ul li a:hover {
+    background: var(--accent-color); /* Change le fond du lien au survol avec une couleur d'accent définie par la variable accent-color */
+    border-radius: 5px; /* Ajoute des bords arrondis de 5px au lien au survol */
+}
+
+
+
+
+
+/* SECTIONS GÉNÉRALES */
+section {
+    padding: 60px 20px; /* Ajoute du padding de 60px en haut et 20px sur les côtés des sections */
+    max-width: 1000px; /* Limite la largeur maximale de la section à 900px */
+    margin: auto; /* Centre la section horizontalement dans la page */
+   
+    
+    
+}
+
+
+
+/* TITRES */
+h2 {
+    font-size: 30px; /* Définit la taille de la police du titre à 28px */
+    color: var(--dark-color); /* Applique une couleur sombre définie par la variable dark-color */
+    text-align: center; /* Centre le titre horizontalement */
+    margin-bottom: 20px; /* Ajoute un espace de 20px en bas du titre */
+    margin-top: 2px;  /* Ajoute un espace avant le titre */
+}
+
+
+
+
+
+
+
+
+/* Cache toutes les sections sauf l'accueil au chargement (à enlever) */
+section {
+    display: none;
+}
+
+/* Assure que l'accueil reste visible si aucune autre section n'est ciblée (à enlever) */
+body:not(:has(:target)) #accueil {
+    display: block;
+}
+
+
+
+
+
+.intro {
+    display: flex;
+    flex-direction: column;         /* Permet d’empiler les éléments verticalement sur petit écran */
+    align-items: center;            /* Centre horizontalement */
+    justify-content: center;        /* Centre verticalement */
+    text-align: center;
+    padding: 50px 20px;             /* Un peu d’espace autour */
+    min-height: 70vh;               /* Hauteur pour centrer verticalement */
+    background-color: var(--background-color); /* optionnel : couleur douce */
+}
+
+
+.intro .photo {
+    width: 150px; /* Définit la largeur de la photo */
+    height: 150px; /* Définit la hauteur de la photo */
+    border-radius: 50%; /* Rend la photo circulaire */
+    border: 4px solid var(--main-color); /* Ajoute une bordure colorée autour de la photo */
+    margin-bottom: 15px; /* Ajoute un espace sous la photo */
+}
+
+
+
+
+.intro-text {
+    max-width: 600px; /* Définit une largeur maximale du texte */
+    margin-left: 20px; /* Ajoute un espace entre la photo et le texte */
+}
+
+
+
+
+.linkedin-btn {
+    display: inline-block; /* Permet au bouton de garder sa largeur et de s'adapter au texte */
+    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
+    padding: 8px 15px; /* Ajoute du padding pour agrandir le bouton */
+    background: var(--main-color); /* Définit la couleur de fond */
+    color: white; /* Définit la couleur du texte en blanc */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    border-radius: 5px; /* Arrondit les bords du bouton */
+    transition: 0.3s; /* Ajoute une transition fluide sur le survol */
+}
+
+.linkedin-btn:hover {
+    background: var(--accent-color); /* Change la couleur du fond au survol */
+} /*Sans :hover, la couleur serait fixe, et l'effet interactif disparaîtrait.*/
+
+
+
+/* Quand la page se charge, chaque section du portfolio s’affiche progressivement avec un effet fluide, ce qui rend la navigation plus agréable et moderne.*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;                          /* Completement transparent au départ */
+        transform: translateY(20px);         /* Décalé vers le bas */
+    }
+    to {
+        opacity: 1;                          /* Complètement visible */
+        transform: translateY(0);            /* À sa position normale */
+    }
+}
+
+
+section {
+    animation: fadeIn 0.8s ease-in-out; /* Animation pour chaque section */
+}
+
+/* Mise en page spécifique à la section À propos */
+.intro-apropos {
+    display: flex;               /* Met le texte et l’image côte à côte */
+    align-items: center;         /* Centre verticalement */
+    justify-content: space-between; /* Met de l’espace entre les deux */
+    gap: 30px;                   /* Espace entre image et texte */
+    flex-wrap: wrap;             /* Permet l’adaptation sur petit écran */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.text-apropos {
+    flex: 1;                     /* Le texte prend tout l’espace dispo */
+    min-width: 250px;
+}
+
+.image-apropos img {
+    max-width: 350px;            /* Limite la taille de l’image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* PROJETS */
+.projet {
+    background: white; /* Définit un fond blanc */
+    padding: 20px; /* Ajoute du padding */
+    margin-bottom: 15px; /* Ajoute un espace entre les projets */
+    border-radius: 8px; /* Arrondit les bords */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+}
+
+.projet a {
+    color: var(--accent-color); /* Définit la couleur du lien */
+    font-weight: bold; /* Rend le texte du lien plus épais */
+}
+
+.projet ul {
+    padding-left: 30px; /* Ajoute un décalage à gauche pour les listes */
+}
+
+
+
+
+
+
+
+/*  FORMATIONS & EXPÉRIENCES */
+.formation, .experience {
+    background: white; /* Définit un fond blanc */
+    padding: 20px; /* Ajoute un padding autour du contenu */
+    margin-bottom: 15px; /* Ajoute un espace entre chaque section */
+    border-radius: 8px; /* Arrondit les bords */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+}
+
+.formation h3, .experience h3 {
+    color: var(--main-color); /* Définit la couleur du titre */
+    font-size: 22px; /* Définit la taille du titre */
+}
+
+.formation p, .experience p {
+    font-size: 16px; /* Définit la taille du texte */
+    color: var(--dark-color); /* Définit la couleur du texte */
+}
+
+
+
+
+
+
+/* COMPÉTENCES */
+#Mescompétences ol {
+    padding-left: 20px; /* Ajoute un décalage à gauche pour la liste */
+}
+
+#Mescompétences li {
+    background: white; /* Définit un fond blanc pour les éléments */
+    margin: 5px 0; /* Ajoute un espacement vertical entre les éléments */
+    padding: 8px; /* Ajoute un padding pour espacer le texte */
+    border-left: 5px solid var(--main-color); /* Ajoute une bordure colorée à gauche */
+}
+
+
+
+
+
+/*CENTRES D’INTÉRÊT */
+.interet {
+    background: white; /* Définit un fond blanc */
+    padding: 20px; /* Ajoute un padding */
+    margin-bottom: 15px; /* Ajoute un espace entre les sections */
+    border-radius: 8px; /* Arrondit les bords */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+}
+
+.interet h3 {
+    color: var(--main-color); /* Définit la couleur du titre */
+    font-size: 22px; /* Définit la taille du titre */
+}
+
+
+
+
+
+
+
+/* SECTION CONTACT */
+#Contact p {
+    font-size: 18px; /* Définit la taille du texte */
+    margin: 5px 0; /* Ajoute un espacement vertical */
+}
+
+#Contact a {
+    color: var(--main-color); /* Définit la couleur des liens */
+    font-weight: bold; /* Rend le texte du lien plus épais */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+#Contact a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+
+
+
+
+
+/*Si l’écran est inférieur à 768px de large (téléphone ou petite tablette) :
+ Le menu (nav ul) passe en colonne → Il est plus lisible.
+Les éléments de l’introduction (.intro) passent en colonne → La photo et le texte ne sont plus côte à côte.
+La photo (.intro .photo) est réduite → Pour éviter qu’elle prenne trop de place.
+Le texte (.intro-text) est centré → Pour une meilleure lisibilité.
+Les sections (section) ont un padding plus petit → Pour éviter trop d’espace vide.
+Les titres (h2) sont plus petits → Pour un meilleur affichage sur mobile.
+Les blocs (.formation, .experience, .projet, .interet) ont moins de padding → Pour optimiser l’espace.*/
+
+
+
+
+
+/*  RESPONSIVE DESIGN */
+
+
+/* Ce bloc CSS s'active uniquement sur les écrans de 768 pixels ou moins (tablettes & mobiles) */
+@media (max-width: 768px) {  
+
+    
+    /*  NAVIGATION */
+   
+    nav ul {
+        flex-direction: column; /* Affiche les liens du menu en colonne (au lieu d'être côte à côte) */
+        align-items: center; /* Centre les éléments du menu dans la colonne */
+    }
+
+    
+    /* SECTION INTRODUCTION */
+  
+    .intro {
+        flex-direction: column; /* Met la photo et le texte l'un en dessous de l'autre */
+    }
+
+    .intro .photo {
+        width: 120px; /* Réduit la largeur de la photo de profil pour les petits écrans */
+        height: 120px; /* Réduit la hauteur également pour garder la photo proportionnée */
+    }
+
+    .intro-text {
+        text-align: center; /* Centre le texte pour une meilleure lisibilité sur mobile */
+    }
+
+    
+    /* SECTIONS GÉNÉRALES */
+   
+    section {
+        padding: 40px 15px; /* Réduit l'espace autour du contenu pour mieux s'adapter aux petits écrans */
+    }
+
+    h2 {
+        font-size: 24px; /* Réduit la taille des titres pour éviter qu'ils prennent trop de place */
+    }
+
+    /* FORMATIONS, EXPÉRIENCES, PROJETS, CENTRES D'INTÉRÊT */
+
+    .formation, .experience, .projet, .interet {
+        padding: 15px; /* Réduit le padding pour éviter des espaces trop grands sur mobile */
+    }
+}
+
+
+/*  ANIMATIONS */
+
+
+/* Création d'une animation appelée "fadeIn" pour une entrée fluide des sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Rend l'élément invisible au début */
+        transform: translateY(20px); /* Décale l'élément de 20px vers le bas */
+    }
+    to {
+        opacity: 1; /* Rétablit l'opacité à 1 (totalement visible) */
+        transform: translateY(0); /* Remet l'élément à sa position normale */
+    }
+}
+
+/* Appliquer l'animation "fadeIn" à toutes les sections */
+section {
+    animation: fadeIn 0.6s ease-in-out; /* L'animation dure 0.6 secondes et est fluide */
+}
+
+
